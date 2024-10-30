@@ -3,11 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { PokemonService } from '../../services/pokemon.service';
 import { PokemonData } from '../../models/pokemonData';
 import { NotFoundError } from 'rxjs';
+import { TransformadorPipe } from '../../pipes/transformador.pipe';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TransformadorPipe],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
